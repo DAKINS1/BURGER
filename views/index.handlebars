@@ -11,7 +11,7 @@
   <div>
     <form action="/{{this.id}}?_method=PUT" method="POST">
     <input type="hidden" name="devoured" value="true">
-    <button type="submit" class='burgerAvailable'>{{this.id}} {{this.burger_name}}</button>
+    <button type="submit" class='Eat'>{{this.id}}. {{this.burger_name}}</button>
     </form>
   </div>
     {{/unless}}
@@ -24,7 +24,7 @@
     <h2>Burgers Ate!</h2>
     {{#each burgers}}
     {{#if this.devoured}}
-  <div class='burgerEaten'>
+  <div class='Ate'>
   <div>
     {{this.id}}. {{this.burger_name}}
     <form action="/{{this.id}}?_method=PUT" method="POST">
@@ -43,7 +43,7 @@
   <div class="form-row">
   <input class="form-control form-control-lg"type="text" id="burg" name="name">
     </div>
-  <button type="submit" class="addBurgerButton">Enter</button>
+  <button type="submit" class="add">Enter</button>
 
   </form>
 

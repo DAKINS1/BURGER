@@ -1,10 +1,5 @@
- html {
-    background-color: #FFC04C;
-
- }
-
  body {
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
     display: flex;
     min-height: 100vh;
@@ -24,31 +19,31 @@
     margin: 6px;
  }
 
- .burgerAvailable {
+ .Eat{
     font-weight: normal;
     font-size: 20px;
     text-align: center;
-    border-radius: 25px;
+    border-radius: 10px;
     width: 100%;
     margin: 10px;
     padding: 10px;
-    background-color: #b7ffc2;
+    background-color: #ffd543;
     border: none;
  }
 
- .burgerAvailable:hover {
-    background-color: #81ff94;
+ .Eat:hover {
+    background-color: #f7ba21;
  }
 
- .burgerEaten {
+ .Ate {
     font-weight: normal;
     font-size: 20px;
     text-align: center;
     width: 100%;
-    border-radius: 25px;
+    border-radius: 10px;
     margin: 20px;
     padding: 10px;
-    background-color: #ffd1c9;
+    background-color: #90c439;
        border: none;
  }
 
@@ -59,25 +54,25 @@
  }
 
 .form-row {
-    margin-left: 300px;
+    margin-left: 320px;
     margin-right: 280px;
 }
 
- .addBurgerButton {
+ .add {
     font-weight: normal;
     font-size: 20px;
     text-align: center;
-    border-radius: 25px;
+    border-radius: 10px;
     width: 48%;
     margin: 10px;
     padding: 10px;
     border: none;
-    margin-left: 300px;
+    margin-left: 310px;
 
  }
 
-.addBurgerButton:active {
-    background-color: #FFC04C;
+.add:active {
+    background-color: #d3d3d3;
 }
 
 .footer {
