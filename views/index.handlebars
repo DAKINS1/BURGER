@@ -1,55 +1,48 @@
-<h1>Eat-da-Burger</h1>
+
 <main>
 
-<div class="container">
+  <div class="container">
 
-  <div class="row justify-content-md-center">
-  <div class="col-md-6">
-    <h2>Burgers To Eat!</h2>
-    {{#each burgers}}
-    {{#unless this.devoured}}
-  <div>
-    <form action="/{{this.id}}?_method=PUT" method="POST">
-    <input type="hidden" name="devoured" value="true">
-    <button type="submit" class='Eat'>{{this.id}}. {{this.burger_name}}</button>
-    </form>
-  </div>
-    {{/unless}}
-    {{/each}}
-  </div>
-  </div>
-
-  <div class="row justify-content-md-center">
-  <div class="col-md-6">
-    <h2>Burgers Ate!</h2>
-    {{#each burgers}}
-    {{#if this.devoured}}
-  <div class='Ate'>
-  <div>
-    {{this.id}}. {{this.burger_name}}
-    <form action="/{{this.id}}?_method=PUT" method="POST">
-    <input type="hidden" name="devoured" value="false">
-    </form>
-  </div>
-  </div>
-    {{/if}}
-    {{/each}}
-  </div>
-  </div>
-
-
-  <h2>Add a Burger!</h2>
-  <form class="create-update-form" action="/" method="POST">
-  <div class="form-row">
-  <input class="form-control form-control-lg"type="text" id="burg" name="name">
+    <div class="row">
+    <div class="col-md-6">
+      <h2>Burgers To Eat!</h2>
+        {{#each burgers}}
+          {{#unless this.devoured}}
+            <form action="/{{this.id}}?_method=PUT" method="POST">
+              <input type="hidden" name="devoured" value="true">
+              <button type="submit" class='Eat'>{{this.id}}. {{this.burger_name}}</button>
+            </form>
+          {{/unless}}
+        {{/each}}
     </div>
-  <button type="submit" class="add">Enter</button>
+    <div class="col-md-6">
+      <h2>Burgers Ate!</h2>
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <form action="/{{this.id}}?_method=DELETE" method="POST">
+              <input type="hidden" name="devoured" value="false">
+              <button type="submit" class='Ate'>{{this.id}}. {{this.burger_name}}</button>
+            </form>
+        {{> burgers/delete-burger}}
+        {{/if}}
+      {{/each}}
+    </div>
+    </div>
+  </div>
 
-  </form>
+
+       <h2>Add a Burger!</h2>
+        <div class="row justify-content-md-center">
+           <form class="create-update-form" action="/" method="POST">
+             <div class="form-group mx-lg-6">
+             <input class="form-control form-control-lg"type="text" id="burg" name="name">
+             <button type="submit" class="add">Enter</button>
+
+           </form>
+         </div>
 
 
+  </div>
 
-
-</div>
 </main>
 
